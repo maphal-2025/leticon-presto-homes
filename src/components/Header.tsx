@@ -7,11 +7,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">L</span>
-            </div>
-            <span className="font-display font-semibold text-lg text-primary">Leticon</span>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
+              alt="Leticon Multi Service Group" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Navigation */}

@@ -7,11 +7,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-hero rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">L</span>
-              </div>
-              <span className="font-display font-semibold text-lg text-primary-glow">Leticon</span>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
+                alt="Leticon Multi Service Group" 
+                className="h-10 w-auto brightness-110"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Professional construction and property services in Pretoria. Your trusted partner for all construction, cleaning, security, and maintenance needs.
