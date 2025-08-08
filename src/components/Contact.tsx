@@ -10,7 +10,8 @@ import {
   Mail, 
   MapPin, 
   Clock,
-  Send
+  Send,
+  MessageCircle
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -107,6 +108,27 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground">Business Hours</h3>
                       <p className="text-muted-foreground">Mon-Fri: 8:00 AM - 5:00 PM<br />Emergency: 24/7</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-card border-border/50">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                      <MessageCircle className="w-6 h-6 text-green-500" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">WhatsApp</h3>
+                      <a 
+                        href="https://wa.me/27676858645" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-green-500 transition-colors"
+                      >
+                        067 685 8645
+                      </a>
                     </div>
                   </div>
                 </CardContent>
