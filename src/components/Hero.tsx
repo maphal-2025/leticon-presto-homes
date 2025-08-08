@@ -8,11 +8,11 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src={heroImage} 
-          alt="Professional construction and property services in Pretoria"
+          src="/lovable-uploads/2fe37800-f02e-4d63-828a-5e7b049c26b9.png" 
+          alt="Leticon Multi Service Group - Professional construction and property services"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/30"></div>
       </div>
 
       {/* Content */}
