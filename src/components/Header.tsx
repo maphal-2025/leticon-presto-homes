@@ -11,7 +11,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
               alt="Leticon Multi Service Group" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
