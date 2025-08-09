@@ -18,10 +18,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 15% 15%;
 
-    /* Leticon Brand Colors - Professional green palette */
-    --primary: 152 55% 25%;  /* Deep forest green - trust & growth */
+    /* Leticon Brand Colors - Professional red palette */
+    --primary: 0 55% 25%;  /* Deep red - trust & strength */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 152 45% 35%;  /* Lighter green for accents */
+    --primary-glow: 0 45% 35%;  /* Lighter red for accents */
 
     --secondary: 210 25% 95%;  /* Clean light grey */
     --secondary-foreground: 210 15% 25%;
@@ -29,15 +29,15 @@ All colors MUST be HSL.
     --muted: 210 15% 96%;
     --muted-foreground: 210 10% 45%;
 
-    --accent: 152 35% 92%;  /* Very light green tint */
-    --accent-foreground: 152 55% 25%;
+    --accent: 0 35% 92%;  /* Very light red tint */
+    --accent-foreground: 0 55% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 210 20% 88%;
     --input: 210 20% 94%;
-    --ring: 152 55% 25%;
+    --ring: 0 55% 25%;
 
     /* Professional Service Industry Colors */
     --construction-orange: 25 85% 55%;  /* Safety orange */
