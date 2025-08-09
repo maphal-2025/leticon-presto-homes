@@ -116,8 +116,8 @@ const Contact = () => {
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-red-500" />
+                    <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                      <MessageCircle className="w-6 h-6 text-green-500" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">WhatsApp</h3>
@@ -125,7 +125,7 @@ const Contact = () => {
                         href="https://wa.me/27676858645" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-red-500 transition-colors"
+                        className="text-muted-foreground hover:text-green-500 transition-colors"
                       >
                         067 685 8645
                       </a>

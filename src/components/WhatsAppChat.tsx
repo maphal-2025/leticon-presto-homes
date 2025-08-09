@@ -129,7 +129,7 @@ const WhatsAppChat = () => {
         <div className="fixed bottom-6 right-6 z-50">
           <Button
             onClick={() => setIsOpen(true)}
-            className="w-16 h-16 rounded-full bg-red-500 hover:bg-red-600 shadow-lg shadow-red-500/25 text-white"
+            className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg shadow-green-500/25 text-white"
             size="icon"
           >
             <MessageCircle className="w-8 h-8" />
@@ -140,9 +140,9 @@ const WhatsAppChat = () => {
       {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-50 w-80 h-96">
-          <Card className="w-full h-full shadow-2xl border-red-200">
+          <Card className="w-full h-full shadow-2xl border-green-200">
             {/* Header */}
-            <CardHeader className="bg-red-500 text-white p-4 rounded-t-lg">
+            <CardHeader className="bg-green-500 text-white p-4 rounded-t-lg">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -150,7 +150,7 @@ const WhatsAppChat = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Leticon Support</h3>
-                    <p className="text-xs text-red-100">Usually replies instantly</p>
+                    <p className="text-xs text-green-100">Usually replies instantly</p>
                   </div>
                 </div>
                 <Button
@@ -175,14 +175,14 @@ const WhatsAppChat = () => {
                     <div
                       className={`max-w-xs p-3 rounded-lg ${
                         message.sender === "user"
-                          ? "bg-red-500 text-white"
+                          ? "bg-green-500 text-white"
                           : "bg-white text-gray-800 shadow-sm"
                       }`}
                     >
                       <p className="text-sm whitespace-pre-line">{message.text}</p>
                       <p
                         className={`text-xs mt-1 ${
-                          message.sender === "user" ? "text-red-100" : "text-gray-500"
+                          message.sender === "user" ? "text-green-100" : "text-gray-500"
                         }`}
                       >
                         {message.timestamp.toLocaleTimeString([], {
@@ -216,7 +216,7 @@ const WhatsAppChat = () => {
                   onClick={handleCallNow}
                   size="sm"
                   variant="outline"
-                  className="flex-1 text-red-600 border-red-200 hover:bg-red-50"
+                  className="flex-1 text-green-600 border-green-200 hover:bg-green-50"
                 >
                   <Phone className="w-4 h-4 mr-1" />
                   Call Now
@@ -224,7 +224,7 @@ const WhatsAppChat = () => {
                 <Button
                   onClick={handleWhatsAppRedirect}
                   size="sm"
-                  className="flex-1 bg-red-500 hover:bg-red-600"
+                  className="flex-1 bg-green-500 hover:bg-green-600"
                 >
                   <MessageCircle className="w-4 h-4 mr-1" />
                   WhatsApp
@@ -242,7 +242,7 @@ const WhatsAppChat = () => {
                 <Button
                   onClick={handleSendMessage}
                   size="icon"
-                  className="bg-red-500 hover:bg-red-600"
+                  className="bg-green-500 hover:bg-green-600"
                 >
                   <Send className="w-4 h-4" />
                 </Button>

@@ -19,7 +19,7 @@ const Hero = () => {
           alt="Leticon Multi Service Group - Professional construction and property services"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-green-600/50 to-primary/30"></div>
       </div>
 
       {/* Content */}
@@ -34,7 +34,7 @@ const Hero = () => {
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Professional
-            <span className="block text-primary-glow">Construction Services</span>
+            <span className="block text-green-400">Construction Services</span>
             in Pretoria
           </h1>
           
@@ -56,17 +56,17 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div className="grid grid-cols-3 gap-6">
             <div className="text-center">
-              <Clock className="w-8 h-8 text-primary-glow mx-auto mb-2" />
+              <Clock className="w-8 h-8 text-green-400 mx-auto mb-2" />
               <div className="text-white font-semibold">24/7</div>
               <div className="text-white/70 text-sm">Emergency Service</div>
             </div>
             <div className="text-center">
-              <Award className="w-8 h-8 text-primary-glow mx-auto mb-2" />
+              <Award className="w-8 h-8 text-green-400 mx-auto mb-2" />
               <div className="text-white font-semibold">500+</div>
               <div className="text-white/70 text-sm">Projects Completed</div>
             </div>
             <div className="text-center">
-              <Shield className="w-8 h-8 text-primary-glow mx-auto mb-2" />
+              <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
               <div className="text-white font-semibold">100%</div>
               <div className="text-white/70 text-sm">Insured & Licensed</div>
             </div>
