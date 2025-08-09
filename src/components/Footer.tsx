@@ -8,12 +8,22 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
-                alt="Leticon Multi Service Group" 
-                className="h-24 w-auto brightness-110 animate-spin"
-                style={{ animationDuration: '10s' }}
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
+                  alt="Leticon Multi Service Group" 
+                  className="h-24 w-auto brightness-110 relative z-10"
+                />
+                {/* Cycling ring around logo */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-32 h-32 relative">
+                    <div className="absolute w-1 h-1 bg-white/40 rounded-full animate-spin" style={{ animationDuration: '4s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
+                    <div className="absolute w-1 h-1 bg-white/60 rounded-full animate-spin" style={{ animationDuration: '4s', animationDelay: '0.25s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
+                    <div className="absolute w-1 h-1 bg-white/40 rounded-full animate-spin" style={{ animationDuration: '4s', animationDelay: '0.5s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
+                    <div className="absolute w-1 h-1 bg-white/60 rounded-full animate-spin" style={{ animationDuration: '4s', animationDelay: '0.75s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Professional construction and property services in Pretoria. Your trusted partner for all construction, cleaning, security, and maintenance needs.
