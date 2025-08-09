@@ -5,8 +5,15 @@ import heroImage from "@/assets/hero-construction.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Text */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5 text-white pointer-events-none z-0">
+        <div className="text-[20rem] font-black uppercase tracking-widest select-none">
+          LETICON
+        </div>
+      </div>
+      
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-[1]">
         <img 
           src="/lovable-uploads/2fe37800-f02e-4d63-828a-5e7b049c26b9.png" 
           alt="Leticon Multi Service Group - Professional construction and property services"

@@ -44,8 +44,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-service">
-      <div className="container mx-auto px-4">
+    <section id="services" className="relative py-20 bg-gradient-service overflow-hidden">
+      {/* Background Text */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5 text-foreground pointer-events-none z-0">
+        <div className="text-[15rem] font-black uppercase tracking-widest select-none transform rotate-12">
+          CONSTRUCTION SERVICES
+        </div>
+      </div>
+      
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-accent text-accent-foreground mb-4">
             Our Services
