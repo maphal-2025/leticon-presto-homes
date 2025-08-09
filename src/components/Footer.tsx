@@ -11,7 +11,8 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/0f7f4cff-77c4-4a14-a26b-31cf5e140666.png" 
                 alt="Leticon Multi Service Group" 
-                className="h-20 w-auto brightness-110"
+                className="h-24 w-auto brightness-110 animate-spin"
+                style={{ animationDuration: '10s' }}
               />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
