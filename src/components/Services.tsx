@@ -6,6 +6,7 @@ import {
   Wrench, 
   TreePine, 
   Droplets,
+  Bus,
   ArrowRight 
 } from "lucide-react";
 
@@ -39,6 +40,12 @@ const services = [
     title: "Sanitizing Services",
     description: "Advanced sanitization and disinfection services to maintain healthy, clean environments.",
     features: ["Deep sanitization", "Disinfection", "Health compliance", "Regular treatments"]
+  },
+  {
+    icon: Bus,
+    title: "Shuttle Service",
+    description: "Reliable transportation solutions for workers and materials, ensuring timely arrivals and departures.",
+    features: ["Worker transport", "Material delivery", "Scheduled routes", "Flexible scheduling"]
   }
 ];
 
