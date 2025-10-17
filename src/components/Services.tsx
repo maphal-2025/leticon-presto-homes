@@ -43,9 +43,9 @@ const services = [
   },
   {
     icon: Bus,
-    title: "Shuttle Service",
-    description: "Reliable transportation solutions for workers and materials, ensuring timely arrivals and departures.",
-    features: ["Worker transport", "Material delivery", "Scheduled routes", "Flexible scheduling"]
+    title: "Shuttle Service (On Request)",
+    description: "Reliable transportation solutions available on service request for workers and materials delivery needs.",
+    features: ["Worker transport", "Material delivery", "On-demand service", "Flexible scheduling"]
   }
 ];
 
