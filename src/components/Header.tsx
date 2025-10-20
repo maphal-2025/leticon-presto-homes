@@ -13,7 +13,7 @@ const Header = () => {
               <img 
                 src={leticonLogo} 
                 alt="Leticon Multi Service Group" 
-                className="h-24 w-auto relative z-10"
+                className="h-32 w-auto relative z-10"
               />
               {/* Cycling dots around logo */}
               <div className="absolute inset-0 flex items-center justify-center">
