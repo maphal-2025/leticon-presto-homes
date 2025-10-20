@@ -12,7 +12,7 @@ const Header = () => {
             <img 
               src={leticonLogo} 
               alt="Leticon Multi Service Group" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
