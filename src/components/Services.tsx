@@ -85,7 +85,7 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
@@ -93,10 +93,6 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="service" className="w-full group">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
               </CardContent>
             </Card>
           ))}
