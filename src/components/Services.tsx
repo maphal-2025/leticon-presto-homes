@@ -97,17 +97,6 @@ const Services = () => {
             </Card>
           ))}
         </div>
-
-        <div className="text-center">
-          <p className="text-muted-foreground mb-6">
-            Need a custom solution? We're here to help with specialized services.
-          </p>
-          <Button size="lg" variant="hero" className="shadow-glow" asChild>
-            <a href="#contact">
-              Request Custom Quote
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );
