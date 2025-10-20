@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
-import leticonLogo from "@/assets/leticon-logo.png";
+import leticonLogo from "@/assets/leticon-full-logo.jpg";
 
 const Header = () => {
   return (
@@ -9,22 +9,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="relative">
-              <img 
-                src={leticonLogo} 
-                alt="Leticon Multi Service Group" 
-                className="h-32 w-auto relative z-10"
-              />
-              {/* Cycling dots around logo */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 relative">
-                  <div className="absolute w-2 h-2 bg-primary rounded-full animate-spin" style={{ animationDuration: '3s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
-                  <div className="absolute w-2 h-2 bg-primary-glow rounded-full animate-spin" style={{ animationDuration: '3s', animationDelay: '0.5s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
-                  <div className="absolute w-2 h-2 bg-accent rounded-full animate-spin" style={{ animationDuration: '3s', animationDelay: '1s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
-                  <div className="absolute w-2 h-2 bg-primary rounded-full animate-spin" style={{ animationDuration: '3s', animationDelay: '1.5s', top: '0%', left: '50%', transformOrigin: '0 64px' }}></div>
-                </div>
-              </div>
-            </div>
+            <img 
+              src={leticonLogo} 
+              alt="Leticon Multi Service Group" 
+              className="h-16 w-auto"
+            />
           </div>
 
           {/* Navigation */}
