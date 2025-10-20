@@ -65,7 +65,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Phone</h3>
-                      <p className="text-muted-foreground">+27 12 345 6789</p>
+                      <p className="text-muted-foreground">076 219 3552</p>
                     </div>
                   </div>
                 </CardContent>
@@ -122,12 +122,12 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground">WhatsApp</h3>
                       <a 
-                        href="https://wa.me/27676858645" 
+                        href="https://wa.me/27762193552" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-green-500 transition-colors"
                       >
-                        067 685 8645
+                        076 219 3552
                       </a>
                     </div>
                   </div>

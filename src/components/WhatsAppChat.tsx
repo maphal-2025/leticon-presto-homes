@@ -62,17 +62,17 @@ const WhatsAppChat = () => {
     }
     
     if (botResponses.quote.some(word => message.includes(word))) {
-      return "I'd be happy to help you get a quote! For an accurate estimate, please call us at 067 685 8645 or tell me more about your specific needs.";
+      return "I'd be happy to help you get a quote! For an accurate estimate, please call us at 076 219 3552 or tell me more about your specific needs.";
     }
     
     if (botResponses.contact.some(word => message.includes(word))) {
-      return "Here's how to reach us:\n\n📱 WhatsApp: 067 685 8645\n📞 Phone: +27 12 345 6789\n✉️ Email: info@leticon.co.za\n📍 Address: 100 James Clark Street, Med Village, Pretoria\n\nWe're available Mon-Fri 8AM-5PM, with 24/7 emergency services!";
+      return "Here's how to reach us:\n\n📱 WhatsApp: 076 219 3552\n📞 Phone: 076 219 3552\n✉️ Email: info@leticon.co.za\n📍 Address: 100 James Clark Street, Med Village, Pretoria\n\nWe're available Mon-Fri 8AM-5PM, with 24/7 emergency services!";
     }
     
     return getRandomResponse([
-      "Thanks for your message! For detailed assistance, please call us at 067 685 8645 or email info@leticon.co.za",
-      "I'd love to help you with that! Please contact our team directly at 067 685 8645 for personalized service.",
-      "That's a great question! Our team can provide detailed information. WhatsApp us at 067 685 8645 or call +27 12 345 6789."
+      "Thanks for your message! For detailed assistance, please call us at 076 219 3552 or email info@leticon.co.za",
+      "I'd love to help you with that! Please contact our team directly at 076 219 3552 for personalized service.",
+      "That's a great question! Our team can provide detailed information. WhatsApp us at 076 219 3552."
     ]);
   };
 
@@ -111,11 +111,11 @@ const WhatsAppChat = () => {
   };
 
   const handleCallNow = () => {
-    window.open("tel:+27676858645", "_self");
+    window.open("tel:+27762193552", "_self");
   };
 
   const handleWhatsAppRedirect = () => {
-    window.open("https://wa.me/27676858645?text=Hi, I'm interested in your services", "_blank");
+    window.open("https://wa.me/27762193552?text=Hi, I'm interested in your services", "_blank");
     toast({
       title: "Redirecting to WhatsApp",
       description: "Opening WhatsApp to continue the conversation...",
