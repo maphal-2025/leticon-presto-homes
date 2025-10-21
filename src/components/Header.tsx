@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
-import leticonLogo from "@/assets/leticon-full-logo.jpg";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -9,11 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src={leticonLogo} 
-              alt="Leticon Multi Service Group" 
-              className="h-20 w-auto"
-            />
+            <Logo className="text-4xl" />
           </div>
 
           {/* Navigation */}

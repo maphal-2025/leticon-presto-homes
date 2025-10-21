@@ -18,10 +18,13 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 15% 15%;
 
-    /* Leticon Brand Colors - Professional red palette */
-    --primary: 0 55% 25%;  /* Deep red - trust & strength */
+    /* Leticon Brand Colors */
+    --primary: 190 80% 35%;  /* Teal blue - main brand */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 0 45% 35%;  /* Lighter red for accents */
+    --primary-glow: 190 70% 45%;  /* Lighter teal for accents */
+    
+    --brand-teal: 190 80% 35%;  /* Main Leticon teal */
+    --brand-coral: 0 55% 60%;  /* Coral accent color */
 
     --secondary: 210 25% 95%;  /* Clean light grey */
     --secondary-foreground: 210 15% 25%;
