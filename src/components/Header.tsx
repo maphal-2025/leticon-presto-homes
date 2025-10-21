@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
-import Logo from "./Logo";
+import LogoWithTransparentBg from "./LogoWithTransparentBg";
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo className="w-64" />
+            <LogoWithTransparentBg className="w-64" />
           </div>
 
           {/* Navigation */}
