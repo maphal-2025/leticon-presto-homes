@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <LogoWithTransparentBg className="w-64" />
+            <LogoWithTransparentBg className="w-80" />
           </div>
 
           {/* Navigation */}
