@@ -31,7 +31,12 @@ const Header = () => {
                 <span>Pretoria</span>
               </div>
             </div>
-            <Button variant="default" size="sm" className="shadow-elegant">
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="shadow-elegant"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Quote
             </Button>
           </div>
