@@ -4,9 +4,7 @@ import {
   Sparkles, 
   Shield, 
   Wrench, 
-  TreePine, 
-  Droplets,
-  Bus,
+  TreePine,
   ArrowRight 
 } from "lucide-react";
 
@@ -34,18 +32,6 @@ const services = [
     title: "Landscaping",
     description: "Transform your outdoor spaces with professional landscaping and garden maintenance services.",
     features: ["Garden design", "Lawn care", "Tree maintenance", "Irrigation systems"]
-  },
-  {
-    icon: Droplets,
-    title: "Sanitizing Services",
-    description: "Advanced sanitization and disinfection services to maintain healthy, clean environments.",
-    features: ["Deep sanitization", "Disinfection", "Health compliance", "Regular treatments"]
-  },
-  {
-    icon: Bus,
-    title: "Shuttle Service",
-    description: "Reliable transportation solutions available on service request for workers and materials delivery needs.",
-    features: ["Worker transport", "Material delivery", "On-demand service", "Flexible scheduling"]
   }
 ];
 
