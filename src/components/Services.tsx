@@ -5,6 +5,8 @@ import {
   Shield, 
   Wrench, 
   TreePine,
+  HardHat,
+  Layers,
   ArrowRight 
 } from "lucide-react";
 
@@ -32,6 +34,18 @@ const services = [
     title: "Landscaping",
     description: "Transform your outdoor spaces with professional landscaping and garden maintenance services.",
     features: ["Garden design", "Lawn care", "Tree maintenance", "Irrigation systems"]
+  },
+  {
+    icon: Layers,
+    title: "Paving",
+    description: "Quality paving solutions for driveways, walkways, and outdoor areas with durable materials.",
+    features: ["Driveway paving", "Walkways", "Patios", "Repairs & restoration"]
+  },
+  {
+    icon: HardHat,
+    title: "Construction",
+    description: "Professional construction services from new builds to renovations and structural improvements.",
+    features: ["New construction", "Renovations", "Extensions", "Project management"]
   }
 ];
 
