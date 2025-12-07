@@ -5,19 +5,23 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import ScrollNavigation from "@/components/ScrollNavigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <section id="hero">
+          <Hero />
+        </section>
         <About />
         <Services />
         <Contact />
       </main>
       <Footer />
       <WhatsAppChat />
+      <ScrollNavigation />
     </div>
   );
 };
