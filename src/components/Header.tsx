@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-border z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-8">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo className="w-80" />
+            <Logo className="w-48 md:w-56" />
           </div>
 
           {/* Navigation */}
