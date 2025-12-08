@@ -38,7 +38,8 @@ const Footer = () => {
               <li>Security Services</li>
               <li>Plumbing Solutions</li>
               <li>Landscaping</li>
-              <li>Sanitizing Services</li>
+              <li>Paving</li>
+              <li>Construction</li>
             </ul>
           </div>
 
