@@ -40,7 +40,7 @@ const Hero = () => {
           
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Leticon (Pty) Ltd delivers comprehensive construction and property services including 
-            cleaning, security, plumbing, landscaping, and sanitizing solutions across Pretoria.
+            cleaning, security, plumbing, landscaping, paving, and construction solutions across Pretoria.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
