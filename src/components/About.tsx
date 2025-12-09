@@ -15,9 +15,9 @@ const About = () => {
           <div className="bg-card rounded-lg p-8 shadow-elegant border border-border">
             <h3 className="text-2xl font-semibold mb-4">Who We Are</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Leticon (Pty) Ltd delivers comprehensive construction and property services including 
-              cleaning, security, plumbing, landscaping, and sanitizing solutions across Pretoria. 
-              We've built our reputation on delivering exceptional quality and reliable service to 
+              Leticon (Pty) Ltd is a leading multi-service provider specializing in construction, 
+              cleaning, security, plumbing, and property maintenance services. Based in Pretoria, 
+              we've built our reputation on delivering exceptional quality and reliable service to 
               both residential and commercial clients.
             </p>
           </div>
