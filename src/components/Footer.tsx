@@ -26,7 +26,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Professional construction and property services in Pretoria. Your trusted partner for all construction, cleaning, security, and maintenance needs.
+              Leticon (Pty) Ltd delivers comprehensive construction and property services including cleaning, security, plumbing, landscaping, and sanitizing solutions across Pretoria.
             </p>
           </div>
 
@@ -38,8 +38,7 @@ const Footer = () => {
               <li>Security Services</li>
               <li>Plumbing Solutions</li>
               <li>Landscaping</li>
-              <li>Paving</li>
-              <li>Construction</li>
+              <li>Sanitizing Solutions</li>
             </ul>
           </div>
 
