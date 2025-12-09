@@ -5,9 +5,7 @@ import {
   Shield, 
   Wrench, 
   TreePine,
-  HardHat,
-  Layers,
-  ArrowRight 
+  HardHat
 } from "lucide-react";
 
 const services = [
@@ -15,7 +13,7 @@ const services = [
     icon: Sparkles,
     title: "Professional Cleaning",
     description: "Comprehensive cleaning services for residential and commercial properties, ensuring pristine environments.",
-    features: ["Deep cleaning", "Regular maintenance", "Sanitization", "Window cleaning"]
+    features: ["Deep cleaning", "Regular maintenance", "Office cleaning", "Window cleaning"]
   },
   {
     icon: Shield,
@@ -36,16 +34,10 @@ const services = [
     features: ["Garden design", "Lawn care", "Tree maintenance", "Irrigation systems"]
   },
   {
-    icon: Layers,
-    title: "Paving",
-    description: "Quality paving solutions for driveways, walkways, and outdoor areas with durable materials.",
-    features: ["Driveway paving", "Walkways", "Patios", "Repairs & restoration"]
-  },
-  {
     icon: HardHat,
-    title: "Construction",
-    description: "Professional construction services from new builds to renovations and structural improvements.",
-    features: ["New construction", "Renovations", "Extensions", "Project management"]
+    title: "Sanitizing Solutions",
+    description: "Professional sanitization and disinfection services for safe, healthy spaces in any environment.",
+    features: ["Deep sanitization", "Disinfection", "Air purification", "COVID-19 protocols"]
   }
 ];
 
