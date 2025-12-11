@@ -194,9 +194,8 @@ const Contact = () => {
                         <SelectItem value="security">Security Services</SelectItem>
                         <SelectItem value="plumbing">Plumbing Solutions</SelectItem>
                         <SelectItem value="landscaping">Landscaping</SelectItem>
-                        <SelectItem value="sanitizing">Sanitizing Services</SelectItem>
-                        <SelectItem value="shuttle">Shuttle Service</SelectItem>
-                        <SelectItem value="consultation">General Consultation</SelectItem>
+                        <SelectItem value="paving">Paving</SelectItem>
+                        <SelectItem value="construction">Construction</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
