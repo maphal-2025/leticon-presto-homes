@@ -58,15 +58,15 @@ const Contact = () => {
           <div className="lg:col-span-1">
             <div className="space-y-6">
               <a href="tel:+27762193552" className="block">
-                <Card className="bg-gradient-card border-border/50 group cursor-pointer hover:shadow-elegant transition-shadow">
+                <Card className="bg-gradient-card border-border/50 hover:shadow-elegant transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground">Phone</h3>
-                        <p className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">076 219 3552</p>
+                        <p className="text-muted-foreground">076 219 3552</p>
                       </div>
                     </div>
                   </CardContent>
