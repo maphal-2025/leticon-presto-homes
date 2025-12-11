@@ -73,19 +73,21 @@ const Contact = () => {
                 </Card>
               </a>
 
-              <Card className="bg-gradient-card border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-primary" />
+              <a href="mailto:info@leticon.co.za" className="block">
+                <Card className="bg-gradient-card border-border/50 hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <Mail className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground">Email</h3>
+                        <p className="text-muted-foreground">info@leticon.co.za</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="text-muted-foreground">info@leticon.co.za</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </a>
 
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
