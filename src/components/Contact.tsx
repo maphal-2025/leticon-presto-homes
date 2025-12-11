@@ -223,6 +223,34 @@ const Contact = () => {
             </Card>
           </div>
         </div>
+
+        {/* Map Section */}
+        <div className="mt-16">
+          <Card className="shadow-elegant overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <MapPin className="w-6 h-6 text-primary" />
+                Our Location
+              </CardTitle>
+              <CardDescription>
+                Visit us at 100 James Clark Street, Med Village, Pretoria
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.123456!2d28.188889!3d-25.746111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ0JzQ2LjAiUyAyOMKwMTEnMjAuMCJF!5e0!3m2!1sen!2sza!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Leticon Location - 100 James Clark Street, Med Village, Pretoria"
+                className="w-full"
+              />
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
