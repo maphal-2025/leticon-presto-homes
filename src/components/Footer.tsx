@@ -56,10 +56,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg text-primary-glow">Contact</h3>
             <div className="space-y-3 text-sm text-white/70">
-              <div className="flex items-center space-x-2">
+              <a href="tel:+27762193552" className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+27 12 345 6789</span>
-              </div>
+                <span>076 219 3552</span>
+              </a>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>info@leticon.co.za</span>
