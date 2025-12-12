@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +11,10 @@ import {
   MapPin, 
   Clock,
   Send,
-  MessageCircle
+  MessageCircle,
+  Paperclip,
+  X,
+  FileText
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -23,6 +26,8 @@ const Contact = () => {
     service: "",
     message: ""
   });
+  const [attachments, setAttachments] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,10 +37,46 @@ const Contact = () => {
       description: "Thank you for contacting Leticon. We'll get back to you within 24 hours.",
     });
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setAttachments([]);
   };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      const newFiles = Array.from(files);
+      const maxSize = 10 * 1024 * 1024; // 10MB max per file
+      
+      const validFiles = newFiles.filter(file => {
+        if (file.size > maxSize) {
+          toast({
+            title: "File too large",
+            description: `${file.name} exceeds 10MB limit`,
+            variant: "destructive"
+          });
+          return false;
+        }
+        return true;
+      });
+
+      setAttachments(prev => [...prev, ...validFiles].slice(0, 5)); // Max 5 files
+    }
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const removeAttachment = (index: number) => {
+    setAttachments(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const formatFileSize = (bytes: number) => {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
   };
 
   return (
@@ -221,6 +262,61 @@ const Contact = () => {
                       rows={5}
                       required
                     />
+                  </div>
+
+                  {/* Attachment Section */}
+                  <div className="space-y-2">
+                    <Label>Attachments (optional)</Label>
+                    <div className="flex items-center gap-2">
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        multiple
+                        onChange={handleFileSelect}
+                        className="hidden"
+                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif,.txt,.xls,.xlsx"
+                      />
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => fileInputRef.current?.click()}
+                        className="flex items-center gap-2"
+                      >
+                        <Paperclip className="w-4 h-4" />
+                        Attach Files
+                      </Button>
+                      <span className="text-sm text-muted-foreground">
+                        Max 5 files, 10MB each
+                      </span>
+                    </div>
+                    
+                    {attachments.length > 0 && (
+                      <div className="mt-3 space-y-2">
+                        {attachments.map((file, index) => (
+                          <div 
+                            key={index} 
+                            className="flex items-center justify-between bg-muted/50 rounded-lg p-3"
+                          >
+                            <div className="flex items-center gap-2 min-w-0">
+                              <FileText className="w-4 h-4 text-primary shrink-0" />
+                              <span className="text-sm truncate">{file.name}</span>
+                              <span className="text-xs text-muted-foreground shrink-0">
+                                ({formatFileSize(file.size)})
+                              </span>
+                            </div>
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => removeAttachment(index)}
+                              className="shrink-0 h-8 w-8 p-0"
+                            >
+                              <X className="w-4 h-4" />
+                            </Button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   <Button type="submit" size="lg" className="w-full" variant="hero">
