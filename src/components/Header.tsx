@@ -24,10 +24,15 @@ const Header = () => {
           {/* Contact Info & CTA */}
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <div className="flex items-center space-x-1 text-muted-foreground">
+              <a 
+                href="tel:+27762193552" 
+                className="group flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Phone className="w-4 h-4" />
-                <span>076 219 3552</span>
-              </div>
+                <span className="max-w-0 overflow-hidden group-hover:max-w-[120px] transition-all duration-300 ease-out whitespace-nowrap">
+                  076 219 3552
+                </span>
+              </a>
               <div className="flex items-center space-x-1 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
                 <span>Pretoria</span>
