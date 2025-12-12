@@ -89,19 +89,26 @@ const Contact = () => {
                 </Card>
               </a>
 
-              <Card className="bg-gradient-card border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-primary" />
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=100+James+Clark+Street,+Med+Village,+Pretoria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="bg-gradient-card border-border/50 hover:shadow-elegant transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground">Address</h3>
+                        <p className="text-muted-foreground">100 James Clark Street<br />Med Village, Pretoria</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Address</h3>
-                      <p className="text-muted-foreground">100 James Clark Street<br />Med Village, Pretoria</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </a>
 
               <Card className="bg-gradient-card border-border/50">
                 <CardContent className="p-6">
