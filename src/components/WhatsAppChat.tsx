@@ -5,7 +5,7 @@ const WhatsAppChat = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <a
-        href="https://wa.me/27762193552?text=Hi, I'm interested in your services"
+        href="https://wa.me/27762193552?text=Hi%2C%20I%27m%20interested%20in%20your%20services"
         target="_blank"
         rel="noopener noreferrer"
       >
