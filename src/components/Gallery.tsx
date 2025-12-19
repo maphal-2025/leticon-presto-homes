@@ -24,8 +24,8 @@ const projects: Project[] = [
     id: 2,
     title: "Residential Driveway Paving",
     category: "paving",
-    beforeImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop",
+    beforeImage: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
+    afterImage: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=600&fit=crop",
     description: "Premium interlocking paver installation for residential property"
   },
   {
@@ -40,8 +40,8 @@ const projects: Project[] = [
     id: 4,
     title: "Parking Lot Paving",
     category: "paving",
-    beforeImage: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=600&fit=crop",
+    beforeImage: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=800&h=600&fit=crop",
+    afterImage: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=800&h=600&fit=crop",
     description: "Complete parking lot resurfacing with proper drainage system"
   },
   {
@@ -56,8 +56,8 @@ const projects: Project[] = [
     id: 6,
     title: "Garden Pathway Paving",
     category: "paving",
-    beforeImage: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
-    afterImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    beforeImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop",
+    afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
     description: "Decorative stone pathway installation in residential garden"
   }
 ];
