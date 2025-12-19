@@ -14,7 +14,11 @@ import {
   MessageCircle,
   Paperclip,
   X,
-  FileText
+  FileText,
+  Mic,
+  Square,
+  Play,
+  Trash2
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -27,7 +31,14 @@ const Contact = () => {
     message: ""
   });
   const [attachments, setAttachments] = useState<File[]>([]);
+  const [isRecording, setIsRecording] = useState(false);
+  const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [recordingTime, setRecordingTime] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -38,6 +49,7 @@ const Contact = () => {
     });
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
     setAttachments([]);
+    clearVoiceMessage();
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -77,6 +89,77 @@ const Contact = () => {
     if (bytes < 1024) return bytes + ' B';
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
     return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  };
+
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+      audioChunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        setAudioBlob(blob);
+        setAudioUrl(URL.createObjectURL(blob));
+        stream.getTracks().forEach(track => track.stop());
+      };
+
+      mediaRecorder.start();
+      setIsRecording(true);
+      setRecordingTime(0);
+      
+      timerRef.current = setInterval(() => {
+        setRecordingTime(prev => prev + 1);
+      }, 1000);
+
+      toast({
+        title: "Recording started",
+        description: "Speak your message now...",
+      });
+    } catch (error) {
+      toast({
+        title: "Microphone access denied",
+        description: "Please allow microphone access to record a voice message.",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const stopRecording = () => {
+    if (mediaRecorderRef.current && isRecording) {
+      mediaRecorderRef.current.stop();
+      setIsRecording(false);
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+      toast({
+        title: "Recording saved",
+        description: "Your voice message has been recorded.",
+      });
+    }
+  };
+
+  const clearVoiceMessage = () => {
+    if (audioUrl) {
+      URL.revokeObjectURL(audioUrl);
+    }
+    setAudioBlob(null);
+    setAudioUrl(null);
+    setRecordingTime(0);
+  };
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
   };
 
   return (
@@ -317,6 +400,60 @@ const Contact = () => {
                         ))}
                       </div>
                     )}
+                  </div>
+
+                  {/* Voice Message Section */}
+                  <div className="space-y-2">
+                    <Label>Voice Message (optional)</Label>
+                    <div className="flex items-center gap-3">
+                      {!audioUrl ? (
+                        <>
+                          <Button
+                            type="button"
+                            variant={isRecording ? "destructive" : "outline"}
+                            onClick={isRecording ? stopRecording : startRecording}
+                            className="flex items-center gap-2"
+                          >
+                            {isRecording ? (
+                              <>
+                                <Square className="w-4 h-4" />
+                                Stop Recording
+                              </>
+                            ) : (
+                              <>
+                                <Mic className="w-4 h-4" />
+                                Record Voice
+                              </>
+                            )}
+                          </Button>
+                          {isRecording && (
+                            <span className="text-sm text-destructive font-medium animate-pulse">
+                              Recording: {formatTime(recordingTime)}
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <div className="flex items-center gap-3 bg-muted/50 rounded-lg p-3 flex-1">
+                          <Play className="w-4 h-4 text-primary shrink-0" />
+                          <audio src={audioUrl} controls className="h-8 flex-1" />
+                          <span className="text-xs text-muted-foreground shrink-0">
+                            {formatTime(recordingTime)}
+                          </span>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+                            onClick={clearVoiceMessage}
+                            className="shrink-0 h-8 w-8 p-0 text-destructive hover:text-destructive"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Record a voice message to describe your project
+                    </p>
                   </div>
 
                   <Button type="submit" size="lg" className="w-full" variant="hero">
